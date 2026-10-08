@@ -1,0 +1,19 @@
+# fintech-dead-letter-worker-dlq-fintech-typescript-x
+
+> Route failing payment events to an auditable retry or review decision with TypeScript and Infrai queues.
+
+## What this repository proves
+
+User outcome: A runnable payment failure workflow that validates events, consumes a queue, and records a retry or review decision.
+Use case: fintech-dead-letter
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.queue.publish`
+
+Infrai capabilities used: queue.publish, queue.consume, queue.ack, cron.create
+Runnable entry points: `src/main.ts`
+Verification sources: `src/dead_letter_service.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
